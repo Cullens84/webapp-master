@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    {% block style %}{% endblock %}
+
+    <style>
+        a.dark {
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <style>
+
+        
+
+        body {
+            background-image: url('static/images/winter-england.jpg');
+            opacity: 5;
+          
+          
+        }
+
+        
+    </style>
+
+    <div class="w3-top" style="opacity: 0.5;">
+        <div class="w3-bar w3-blue">
+            <a href="http://localhost:5000/help" class="w3-bar-item w3-button dark">About</a>
+            <a href="http://localhost:5000/register" class="w3-bar-item w3-button dark">Register Here</a>
+            <a href="http://localhost:5000/login" class="w3-bar-item w3-button dark">Login</a>
+            <a href="http://localhost:5000/links" class="w3-bar-item w3-button dark">Links</a>
+            <a href="http://localhost:5000/home" class="w3-bar-item w3-button dark">Home</a>
+            
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+
+</body>
+
+</html>

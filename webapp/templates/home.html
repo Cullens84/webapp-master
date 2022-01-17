@@ -1,0 +1,121 @@
+
+ 
+
+    {% block title %} {% endblock %}
+    
+    {% block style %} 
+    
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      * {box-sizing: content-box;}
+      
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(175, 98, 98);
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #2321b9;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #110303;
+      }
+      
+      .container {
+        border-radius: 5px;
+        background-color: #bd9595;
+        padding: 20px;
+      }
+      </style>
+      </head>
+      <body>
+        <a href="/login" class="w3-bar-item w3-button " style="width:33.3%">Login</a>
+        <a href="/links" class="w3-bar-item w3-button " style="width:33.3%">Links</a>
+
+      <center><h3>Book Entry</h3></center>
+      
+      <div class="container">
+        <form class="w3-xlarge" action="/home" method="post">
+          
+        
+
+          <label for="Title">Title</label>
+          <input type="text" action="/home" method="post" placeholder="">
+
+          <label for="Author">Author</label>
+          <input type="text" action="/home" method="post"  placeholder="">
+
+          <label for="PersonId">Person ID</label>
+          <input type="text" action="/home" method="post"  placeholder="">
+
+          <a href="/home" class="w3-bar-item w3-button " style="width:33.3%">submit</a>
+        </form>
+      </div>
+      
+      </body>
+      </html>
+      
+    
+    {% endblock %}
+
+  <!-- <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
+     <!-- <label for="Genre">Genre</label>         <select id="" name="">
+            <option value="">Please select</option>
+            <option value="">Action/Adventure</option>
+            <option value="">Art</option>
+            <option value="">Alternate History</option>
+            <option value="">Anthology</option>
+            <option value="">Autobiography</option>
+            <option value="">Biography</option>
+            <option value="">Chick Lit</option>
+            <option value="">Childrens</option>
+            <option value="">Classic</option>
+            <option value="">Comedy</option>
+            <option value="">Comic Book</option>
+            <option value="">Coming-Of-Age</option>
+            <option value="">Crime</option>
+            <option value="">Drama</option>
+            <option value="">Fairytale</option>
+            <option value="">Fantasy</option>
+            <option value="">Graphic Novel</option>
+            <option value="">Historical Fiction</option>
+            <option value="">Horror</option>
+            <option value="">Mystery</option>
+            <option value="">Paranormal Romance</option>
+            <option value="">Picture Book</option>
+            <option value="">Poerty</option>
+            <option value="">Political Thriller</option>
+            <option value="">Romance</option>
+            <option value="">Satire</option>
+            <option value="">Sci Fi</option>
+            <option value="">Science</option>
+            <option value="">Suspense</option>
+            <option value="">Sport</option>
+            <option value="">Thriller</option>
+            <option value="">True Crime</option>
+            <option value="">Western</option>
+            <option value="">Young Adult</option>
+                       
+            
+          </select>
+      
+          <label for="">Review</label>
+          <textarea placeholder="Write a review" style="height:200px"></textarea> -->
+    
+      
