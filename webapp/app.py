@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
+from flask_table import Table, Col, LinkCol
 from db_routines import DbRoutines
+from table import Books1
 
 
 
@@ -25,6 +27,27 @@ def index():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     return render_template("login.html")
+
+@app.route('/home', methods=['POST', 'GET'])
+def systems():
+        if request.method == 'GET':
+            cursor = dbRoutines.mysql.connection.cursor()
+            cursor.execute(f"use webapp_db;")
+            cursor.execute("SELECT * FROM `Books`")
+            rows = cursor.fetchall()
+            Table = Books1(rows)
+            return render_template('index.html', Table = Books1)
+        if request.method == 'POST':
+            Title = request.form['Title']
+            Author = request.form['Author']  
+            cursor = dbRoutines.mysql.connection.cursor()
+            cursor.execute(f"use webapp_db;")
+            cursor.execute (f"INSERT INTO Books (`Title`, `Author`) VALUES ('{Title}', '{Author}');")
+            dbRoutines.mysql.connection.commit()                                            
+            cursor.close()          
+            return render_template("home.html")
+
+        return render_template("home.html")
 
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -69,59 +92,8 @@ def verify():
                                       
     return render_template("login.html")
 
-@app.route('/home', methods=['POST', 'GET'])
-def systems():
-    if request.method == 'POST':
-        if request.method == 'GET':
-            cursor = dbRoutines.mysql.connection.cursor()
-            cursor.execute(f"use webapp_db;")
-            cursor.execute("SELECT * FROM `Books`")
-            rows = cursor.fetchall()
-            
-            cursor.close() 
-            return render_template('home.html')
-        if request.form['Title'] != "" and request.form['Author'] != "":
-            Title = request.form['Title']
-            Author = request.form['Author']
-            cursor = dbRoutines.mysql.connection.cursor()
-            cursor.execute(f"use webapp_db;")
-            cursor.execute(f"SELECT COUNT(*) FROM `Books` WHERE Author = '{Author}';")
-            
-            Books_list = cursor.fetchall()
-            if Books_list[0]['COUNT(*)'] > 0:                     
-                cursor.close()
-                return render_template("message.html", message=f"A Book called '{Title}' already exists.")
-            else:    
-                cursor.execute (f"INSERT INTO `Books (`Title`, `Author`) VALUES ('{Title}', '{Author}');")
-                dbRoutines.mysql.connection.commit()                                            
-                cursor.close()          
-                return render_template("home.html")
 
-    return render_template("home.html")
-
-# @app.route('/home', methods=['POST', 'GET'])
-# def home():
-#     if request.method == 'POST':
-#         if request.form['title'] != "" and request.form['author'] != "":
-#             title = request.form['title']
-#             author = request.form['author']
-#             cursor = dbRoutines.mysql.connection.cursor()
-#             cursor.execute(f"use webapp_db;")
-#             cursor.execute(f"SELECT * FROM `Books`;")
-        
-#             user_list = cursor.fetchall()
-#             if user_list[0]['*'] < 0:                     
-#                 cursor.close()
-#                 return render_template("home.html")
-#             else:
-#                 cursor.execute(f"INSERT INTO `Books` (`Title`, `Author`) VALUES ('{title}','{author}');")
-#                 dbRoutines.mysql.connection.commit()
-#                 cursor.close()
-#                 return render_template("home.html")
-#         else:
-#             return render_template("message.html")
-#     else:
-#         return render_template("home.html")           
+          
 
 
 @app.route('/help')

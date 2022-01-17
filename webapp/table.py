@@ -1,7 +1,7 @@
 from flask_table import Table, Col, LinkCol
 
-class Books(Table):
-    BookID = Col('BookID', show=False)
+class Books1(Table):
     Title = Col('Title')
     Author = Col('Author')
-    credId = Col('credId', show=False)
+    BookID = Col('BookID', show=False)
+    

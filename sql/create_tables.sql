@@ -14,7 +14,7 @@ CREATE TABLE Credentials (
     uname varchar(255) NOT NULL,
     pwd varchar(255) NOT NULL,
 
-    PRIMARY KEY (credId)
+   
 );
 
 -- Create the Persons table and set the uniqe auto_incrementing ID
@@ -37,9 +37,9 @@ CREATE TABLE Books (
     BookID int NOT NULL AUTO_INCREMENT,
     Title varchar(255),
     Author varchar(255),
-    PersonID int NOT NULL,
+    
 
     PRIMARY KEY (BookID),
-    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+    
 );
 
