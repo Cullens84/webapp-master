@@ -6,7 +6,7 @@ from table import Books1
 
 
 ########################################################
-# TODO: Make server production grade using 'waitress'  #
+
 ########################################################
 
 app = Flask(__name__)
