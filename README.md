@@ -13,7 +13,7 @@ Databases
 Continuous Integration and Deployment (CI/CD)
 Cloud Fundamentals
 Containerisation
-This project is an individual project designed to demonstrate your knowledge.
+
 
 Overview
 Your objective with this project is to achieve the following:
@@ -97,14 +97,6 @@ Build the Docker images.
 Push the Docker images to a registry.
 Deploy to a Swarm.
 Every time you push new code to your GitHub repository, the pipeline should be triggered. This can be achieved using a GitHub Webhook.
-
-Deployment
-Technologies:
-
-Docker Swarm
-The application should be deployed to a Docker Swarm hosted in the cloud.
-
-It should consist of at least one manager node and one worker node. Neither of these nodes should be the Jenkins build server.
 
 Deliverable
 The final deliverable of this project is a GitHub repository containing all of the code you have written for this project, including the software source code, Jenkins configuration, Docker configuration and any related scripts.
