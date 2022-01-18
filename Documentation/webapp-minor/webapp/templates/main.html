@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Main{% endblock %}
+
+{% block style %}
+
+<style>
+
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="w3-display-center">
+    <div class="w3-display-left">
+        <iframe src="/systems" title="Game Systems" height="790" width="300" style="border:none;"></iframe>
+    </div>
+
+    <div class="w3-display-right">
+        <form class="w3-display-center" action="/main" method="post">
+            <div>
+                <table>
+                    <tr>
+                        <th>Name of Unit</th>
+                        <th>Type of Unit</th>
+                        <th>Number</th>
+                        <th>Points Cost</th>
+                        <th>Monetary Cost</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="mininame" placeholder="Name of Unit"></td>
+                        <td><input type="text" name="minitype" placeholder="Type of Unit"></td>                                          
+                        <td><input type="number" name="mininum" placeholder="0"></td>                          
+                        <td><input type="number" name="minipoint" placeholder="0"></td>                  
+                        <td><input type="number" name="minicost" placeholder="0"></td>                  
+                    </tr>
+                </table>
+
+            </div>
+            <div>
+                <button class="btn-lg w3-block btn-primary w3-small" type="submit" style="opacity: 1;" onchange="myFunction()">Submit</button>       
+            </div>
+        </form>
+        {{ table }}
+
+    </div>
+</div>
+
+
+{% endblock %}

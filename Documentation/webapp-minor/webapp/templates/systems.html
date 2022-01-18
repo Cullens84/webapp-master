@@ -1,0 +1,36 @@
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    {% block style %}{% endblock %}
+
+    <style>
+        a.dark {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="w3-display-center">
+    <form class="w3-xlarge" action="/systems" method="post">
+
+        <div>
+            <input class="w3-input w3-border" type="text" name="company" placeholder="Game Company">                              
+            <input class="w3-input w3-border" type="text" name="game_system" placeholder="Game System">                           
+            <input class="w3-input w3-border" type="text" name="game_faction" placeholder="Game Faction">                         
+            <input class="w3-input w3-border" type="text" name="project_name" placeholder="Project Name">                     
+
+        </div>
+        <div>
+            <button class="btn-lg w3-block btn-primary w3-small" type="submit" style="opacity: 1;">Submit</button>       
+        </div>
+    </form>
+    
+    {{data}}
+  
+</div>
+</body>
