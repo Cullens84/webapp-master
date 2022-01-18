@@ -120,59 +120,47 @@ You must provide your trainer with the link to your repository.
 Documentation
 You are required to create a write-up for this project in the form of a README file on your repository.
 
-You need to include:
+As specified in the brief for this project, I will plan, prepare and create a web application that demonstrates CRUD functionality. Integrates with a database and is deployed using Docker containers. The technologies I will be using are Python, Flask, Docker compose, Msql, Pytest, Git-hub, Trello, VsCode.
+This project is demonstrated in a virtual machine within my own computer. 
+In the planning phase I will use a Trello board to segment my work and keep track during each phase of the development. Initially I will be planning and performing research on how best to achieve this. 
+Throughout the entire project I will be using scrum to model where I am and where I am going. This will involve a quick 5 minute recap of my current progress and documenting my daily plan. This will be included in the project documentation.
+Using the MosCoW prioritisation method the application:
+Must have – CRUD functionality, be deployed in a docker container, integrate with a database
+Should have – CI/CD pipelines, unit testing
+Could have – Interactive images/functionality
+Will not have – social media integration, integration of any other language 
 
-An explanation of your app and how it fulfils the brief.
-A technical description of how the application works.
-A technical description of how the pipeline works.
-A report on the success and code coverage of your unit tests.
-Any future improvements you would make.
-You must use diagrams to illustrate your work as much as possible and opt for a succinct writing style. Examples of diagrams to include are:
-
-Entity Relationship Diagram (ERD).
-A full CI/CD pipeline diagram.
-An infrastructure diagram, illustrating the cloud resources and how they network together.
-A component-level diagram, illustrating how the application interfaces with the database.
-You are welcome to combine diagrams if you so wish, such as the CI/CD pipeline with the infrastructure pipeline.
-
-Video
-You should also record a brief video (between 2-5mins) demonstrating:
-
-The CRUD functionality of your app.
-Your CI/CD pipeline in action, show how after a new push to your GitHub repository your changes should be automatically reflected on the deployed application without manual configuration.
-Consult the following links for guidance on recording your screen:
-
-Recording your screen on Windows
-Recording your screen on MacOS
-If you are struggling to record your screen, please ask your trainer for support.
+The app itself will be a simple book logging app. As an avid reader I like to log what books I have read and my thoughts on it in the form of a review.
+As such the app will present with a simple homepage with links to a registration, login, about and links page. 
+Home page
+The home page should be simple, clean and easy to navigate. Containing links to all relevant pages.
+The background image should be simple and apt to the purpose of the site. 
+Registration Page
+The registration page again should be simple and clean with the same navigation as the home page. Buttons or menus in the same place. This page should allow a user to easily identify it’s a page for registering their login details to return to the site and keep track of their book logs.
+Login Page
+The login page will carry much the same formatting of the registration page but without the registration button. Again it should be clean and simple but apt to the purpose of the site.
+About page
+The about page is where I will have a simple message about the site and its purpose with simplified instruction. On this page there will be the same formatting as others but with the instruction easily visible.
 
 
-This video should be hosted on a file sharing site (Google Drive, Dropbox, etc.) and linked in your README file. Make sure that the link is public so whoever is marking it can view it.
+Links page
+The links page is where I will continue the format of the other pages but with links to popular book websites. These links will be easily identifiable and simply click to go to that site. 
+Book entry page
+This page will depart from the standard format on other pages and be very simple, very clean. It will simply have an entry section containing the following entries
+First name
+Last name
+Book title
+Book author
+Basic review
+These will be in the for of entry cells. With clear instructions. Followed by a simple submit button.  
+Tying all these pages together is a mysql server using phpMyAdmin. This mysql server will store users registration details and the entered book logs.
 
-Marking Scheme
-Below are the skills that we will be evaluating for this
-assessment. These skills are as described in the SFIA 7 framework;
-please see below if you wish to have more information:
+THE PROJECT
 
-https://www.sfia-online.org/en/framework
+The final state of my project is short of the stated requirments. This is in part due to the lack of time, lack of consistancy in the knowledge base. 
 
-The skills this assessment will discuss are the following:
-
-Programming/software development
-Systems integration and build
-Software Design
-Release and Deployment
-Programming & Software Development
-Designs, codes, verifies, tests, documents, amends and refactors simple
-programs/scripts. Applies agreed standards and tools, to achieve a
-well-engineered result. Reviews own work.
-Below is the list of criteria that will be assessed from your
-deliverable:
-
-I have created a very basic web app.
-This app will take a new user and register there username and password
-they will then be able to login
-once logged in the user can enter the details of the book they have read
+I have made a web app that is configured to be deployed using docker. The webapp has unit tests and while using jenkins my knowledge of how it actually functions 
+is lacking. 
 
 
 This app is python based, docker deployed.
@@ -190,6 +178,9 @@ the webapp was run in docker containers
 using jenkins 
 
 ![jenkins run image](/webapp-master/imagesformd/jenkins run image.png)
+
+Video of webapp
+There is a video file 
 
 Conclusion
 
